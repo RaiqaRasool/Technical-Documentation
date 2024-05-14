@@ -6,12 +6,12 @@ stages:
 fetch_changes:
   stage: fetch_changes
   script:
+    - git config --global user.email "rasoolraiqa@gmail.com"
+    - git config --global user.name "Raiqa Rasool"
     - git remote add github https://github.com/RaiqaRasool/Technical-Documentation.git
     - git fetch github
-    - git checkout main
-    - git merge github/main
-  only:
-    - web
+    - git checkout origin/main
+    - git merge -f github/main
 
 build:
   stage: build

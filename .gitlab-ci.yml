@@ -11,6 +11,7 @@ fetch_changes:
     - git remote add github https://github.com/RaiqaRasool/Technical-Documentation.git
     - git fetch github
     - git checkout origin/main
+    - git branch
     - git merge github/main
     - git push origin main
 

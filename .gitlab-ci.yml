@@ -18,8 +18,8 @@ fetch_changes:
     # - chmod 600 id_rsa
     # - ssh-agent bash -c 'ssh-add id_rsa'; git push git@$CI_SERVER_HOST:$CI_PROJECT_PATH.git HEAD:main
     - git push https://oauth2:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:main
-  after_script:
-    - rm id_rsa
+  # after_script:
+  #   - rm id_rsa
 
 build:
   stage: build

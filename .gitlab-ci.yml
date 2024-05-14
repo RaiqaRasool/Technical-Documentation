@@ -12,6 +12,7 @@ fetch_changes:
     - git fetch github
     - git checkout origin/main
     - git merge github/main
+    - git push origin main
 
 build:
   stage: build
